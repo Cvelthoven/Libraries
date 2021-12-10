@@ -14,7 +14,7 @@
 
 //-----------------------------------------------------------------------------
 //  Development include file
-#include <QDebug>
+//#include <QDebug>
 
 //-----------------------------------------------------------------------------
 //
@@ -23,17 +23,17 @@
 //-----------------------------------------------------------------------------
 LibApplicationSettings::LibApplicationSettings()
 {
-    qDebug() << "LibApplicationSettings default contructor called";
+//    qDebug() << "LibApplicationSettings default contructor called";
 }
 
 LibApplicationSettings::LibApplicationSettings(const QString &strOrganization,
                                                const QString &strDomain,
                                                const QString &strApplication)
 {
-    qDebug() << "LibApplicationSettings contructor called with:";
-    qDebug() << "strOrganization: " << strOrganization;
-    qDebug() << "strDomain: " << strDomain;
-    qDebug() << "strApplication: " << strApplication;
+//    qDebug() << "LibApplicationSettings contructor called with:";
+//    qDebug() << "strOrganization: " << strOrganization;
+//    qDebug() << "strDomain: " << strDomain;
+//    qDebug() << "strApplication: " << strApplication;
     //-------------------------------------------------------------------------
     //
     //  Set application environment definitions
@@ -65,9 +65,9 @@ LibApplicationSettings::LibApplicationSettings(const QString &strOrganization,
 QString LibApplicationSettings::GetAppSetting(const QString &strSection,
                                               const QString &strSettingName)
 {
-    qDebug() << "LibApplicationSettings GetAppSetting called with:";
-    qDebug() << "strSection: " << strSection;
-    qDebug() << "strSettingName: " << strSettingName;
+//    qDebug() << "LibApplicationSettings GetAppSetting called with:";
+//    qDebug() << "strSection: " << strSection;
+//    qDebug() << "strSettingName: " << strSettingName;
 
     QSettings programDefault;
 
@@ -109,10 +109,10 @@ void LibApplicationSettings::SetAppSetting(const QString &strSection,
                                            const QString &strSettingName,
                                            const QString &strSettingValue)
 {
-    qDebug() << "LibApplicationSettings SetAppSetting called with:";
-    qDebug() << "strSection: " << strSection;
-    qDebug() << "strSettingName: " << strSettingName;
-    qDebug() << "strSettingValue: " << strSettingValue;
+//    qDebug() << "LibApplicationSettings SetAppSetting called with:";
+//    qDebug() << "strSection: " << strSection;
+//    qDebug() << "strSettingName: " << strSettingName;
+//    qDebug() << "strSettingValue: " << strSettingValue;
 
     QSettings programDefault;
 

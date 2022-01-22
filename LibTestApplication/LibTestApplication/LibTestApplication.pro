@@ -12,7 +12,10 @@ CONFIG += c++11
 #   - LibApplicationSettings
 DEPENDPATH += . "/home/vmlindev01admin/Dev/Libraries/Libraries/LibApplicationSettings/LibApplicationSettings"
 INCLUDEPATH += "/home/vmlindev01admin/Dev/Libraries/Libraries/LibApplicationSettings/LibApplicationSettings"
-LIBS += -L"/home/vmlindev01admin/Dev/Libraries/Libraries/LibApplicationSettings/build-LibApplicationSettings-Desktop_Qt_5_15_0_GCC_64bit-Debug" -lLibApplicationSettings
+LIBS += -L/home/vmlindev01admin/Dev/Libraries/Libraries/LibApplicationSettings/build-LibApplicationSettings-Desktop_Qt_5_15_0_GCC_64bit-Debug/ -lLibApplicationSettings
+#INCLUDEPATH += $$PWD/../../LibApplicationSettings/build-LibApplicationSettings-Desktop_Qt_5_15_0_GCC_64bit-Debug
+#DEPENDPATH += $$PWD/../../LibApplicationSettings/build-LibApplicationSettings-Desktop_Qt_5_15_0_GCC_64bit-Debug
+#LIBS += -L$$PWD/../../LibApplicationSettings/build-LibApplicationSettings-Desktop_Qt_5_15_0_GCC_64bit-Debug/ -lLibApplicationSettings
 
 SOURCES += \
     main.cpp \

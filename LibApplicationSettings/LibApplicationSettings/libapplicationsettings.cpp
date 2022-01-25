@@ -14,7 +14,7 @@
 
 //-----------------------------------------------------------------------------
 //  Development include file
-//#include <QDebug>
+#include <QDebug>
 
 //-----------------------------------------------------------------------------
 //
@@ -37,9 +37,7 @@ LibApplicationSettings::LibApplicationSettings(const QString &strOrganization,
     //-------------------------------------------------------------------------
     //
     //  Set application environment definitions
-    QCoreApplication::setOrganizationName(strOrganization);
-    QCoreApplication::setOrganizationDomain(strDomain);
-    QCoreApplication::setApplicationName(strApplication);
+    SetAppEnvironment(strOrganization, strDomain, strApplication);
 }
 
 //-----------------------------------------------------------------------------
@@ -128,5 +126,34 @@ void LibApplicationSettings::SetAppSetting(const QString &strSection,
     //
     //  Set value
     programDefault.setValue(strFullKeyPath,strSettingValue);
+
+}
+
+//-----------------------------------------------------------------------------
+//
+//  SetAppSettings
+//
+//  Retieve the value of a application configuration setting
+//
+//  Input:
+//  - strSection:      section name in the configuration
+//  - strSettingName:  setting name in the configuration
+//  - strSettingValue: value of the setting int the configuration
+//
+//-----------------------------------------------------------------------------
+void LibApplicationSettings::SetAppEnvironment(const QString &strOrganization,
+                                               const QString &strDomain,
+                                               const QString &strApplication)
+{
+    qDebug() << "LibApplicationSettings contructor called with:";
+    qDebug() << "strOrganization: " << strOrganization;
+    qDebug() << "strDomain: " << strDomain;
+    qDebug() << "strApplication: " << strApplication;
+    //-------------------------------------------------------------------------
+    //
+    //  Set application environment definitions
+    QCoreApplication::setOrganizationName(strOrganization);
+    QCoreApplication::setOrganizationDomain(strDomain);
+    QCoreApplication::setApplicationName(strApplication);
 
 }

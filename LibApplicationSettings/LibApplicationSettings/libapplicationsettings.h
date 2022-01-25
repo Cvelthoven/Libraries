@@ -17,6 +17,9 @@ public:
     void SetAppSetting(const QString &strSection,
                        const QString &strSettingName,
                        const QString &strSettingValue);
+    void SetAppEnvironment(const QString &strOrganization,
+                           const QString &strDomain,
+                           const QString &strApplication);
 
 private:
     QString strFullKeyPath;

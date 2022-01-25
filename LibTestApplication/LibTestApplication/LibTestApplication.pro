@@ -10,12 +10,10 @@ CONFIG += c++11
 
 # library entries
 #   - LibApplicationSettings
-DEPENDPATH += . "/home/vmlindev01admin/Dev/Libraries/Libraries/LibApplicationSettings/LibApplicationSettings"
-INCLUDEPATH += "/home/vmlindev01admin/Dev/Libraries/Libraries/LibApplicationSettings/LibApplicationSettings"
-LIBS += -L/home/vmlindev01admin/Dev/Libraries/Libraries/LibApplicationSettings/build-LibApplicationSettings-Desktop_Qt_5_15_0_GCC_64bit-Debug/ -lLibApplicationSettings
-#INCLUDEPATH += $$PWD/../../LibApplicationSettings/build-LibApplicationSettings-Desktop_Qt_5_15_0_GCC_64bit-Debug
-#DEPENDPATH += $$PWD/../../LibApplicationSettings/build-LibApplicationSettings-Desktop_Qt_5_15_0_GCC_64bit-Debug
-#LIBS += -L$$PWD/../../LibApplicationSettings/build-LibApplicationSettings-Desktop_Qt_5_15_0_GCC_64bit-Debug/ -lLibApplicationSettings
+unix:!macx: LIBS += -L$$PWD/../../LibApplicationSettings/build-LibApplicationSettings-Desktop_Qt_5_15_0_GCC_64bit-Debug/ -lLibApplicationSettings
+
+INCLUDEPATH += $$PWD/../../LibApplicationSettings/LibApplicationSettings
+DEPENDPATH += $$PWD/../../LibApplicationSettings/LibApplicationSettings
 
 SOURCES += \
     main.cpp \
@@ -31,3 +29,4 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+

@@ -14,26 +14,38 @@
 
 //-----------------------------------------------------------------------------
 //  Development include file
-#include <QDebug>
+//#include <QDebug>
 
 //-----------------------------------------------------------------------------
 //
 //  Constructors
 //
 //-----------------------------------------------------------------------------
+//
+//  Default contructor
+//
+//-----------------------------------------------------------------------------
 LibApplicationSettings::LibApplicationSettings()
 {
-//    qDebug() << "LibApplicationSettings default contructor called";
 }
+
+//-----------------------------------------------------------------------------
+//
+//  LibApplicationSettings
+//
+//  Set the application environment
+//
+//  Input:
+//  - strOrganization: Organization name
+//  - strDomain:       Domain name
+//  - strApplication:  Application name
+//
+//-----------------------------------------------------------------------------
 
 LibApplicationSettings::LibApplicationSettings(const QString &strOrganization,
                                                const QString &strDomain,
                                                const QString &strApplication)
 {
-//    qDebug() << "LibApplicationSettings contructor called with:";
-//    qDebug() << "strOrganization: " << strOrganization;
-//    qDebug() << "strDomain: " << strDomain;
-//    qDebug() << "strApplication: " << strApplication;
     //-------------------------------------------------------------------------
     //
     //  Set application environment definitions
@@ -131,24 +143,20 @@ void LibApplicationSettings::SetAppSetting(const QString &strSection,
 
 //-----------------------------------------------------------------------------
 //
-//  SetAppSettings
+//  SetAppEnvironment
 //
-//  Retieve the value of a application configuration setting
+//  Set the application environment
 //
 //  Input:
-//  - strSection:      section name in the configuration
-//  - strSettingName:  setting name in the configuration
-//  - strSettingValue: value of the setting int the configuration
+//  - strOrganization: Organization name
+//  - strDomain:       Domain name
+//  - strApplication:  Application name
 //
 //-----------------------------------------------------------------------------
 void LibApplicationSettings::SetAppEnvironment(const QString &strOrganization,
                                                const QString &strDomain,
                                                const QString &strApplication)
 {
-    qDebug() << "LibApplicationSettings contructor called with:";
-    qDebug() << "strOrganization: " << strOrganization;
-    qDebug() << "strDomain: " << strDomain;
-    qDebug() << "strApplication: " << strApplication;
     //-------------------------------------------------------------------------
     //
     //  Set application environment definitions

@@ -129,7 +129,7 @@ void LibApplicationSettings::SetAppSetting(const QString &strSection,
     //-------------------------------------------------------------------------
     //
     //  Build path
-    if (strSection.size() != 0)
+    if (strSection.size() > 0)
         strFullKeyPath = strSection + "//" + strSettingName;
     else
         strFullKeyPath = strSettingName;
@@ -160,8 +160,11 @@ void LibApplicationSettings::SetAppEnvironment(const QString &strOrganization,
     //-------------------------------------------------------------------------
     //
     //  Set application environment definitions
-    QCoreApplication::setOrganizationName(strOrganization);
-    QCoreApplication::setOrganizationDomain(strDomain);
-    QCoreApplication::setApplicationName(strApplication);
+    if (strOrganization.size() > 0)
+        QCoreApplication::setOrganizationName(strOrganization);
+    if (strDomain.size() > 0)
+        QCoreApplication::setOrganizationDomain(strDomain);
+    if (strApplication.size() > 0)
+        QCoreApplication::setApplicationName(strApplication);
 
 }
